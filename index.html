@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>取消訂閱 @TsaiAGa - YouTube</title>
     <style>
-        /* 基礎全螢幕重設 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,7 +12,6 @@
             font-family: "Roboto", "Arial", sans-serif;
         }
 
-        /* 模擬 YouTube 深色模式背景 */
         body {
             background-color: #0f0f0f;
             color: #f1f1f1;
@@ -23,7 +21,6 @@
             height: 100vh;
         }
 
-        /* 置中的懸浮卡片 */
         .unsubscribe-card {
             background-color: #212121;
             padding: 30px 40px;
@@ -34,47 +31,43 @@
             width: 90%;
         }
 
-        /* 標題設定 */
         h3 {
             font-size: 18px;
             font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        p {
-            font-size: 14px;
-            color: #aaa;
             margin-bottom: 24px;
         }
 
-        /* 讓按鈕容器居中並有適當間距 */
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 40px;
+        /* 仿 YouTube 官方的訂閱/取消訂閱按鈕樣式 */
+        .yt-btn {
+            display: inline-block;
+            background-color: #f1f1f1;
+            color: #0f0f0f;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .yt-btn:hover {
+            background-color: #d9d9d9;
+        }
+
+        .yt-btn:active {
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
 
     <div class="unsubscribe-card">
-        <h3>管理蔡阿嘎的訂閱狀態</h3>
-        <p>點擊下方按鈕以變更您對 @TsaiAGa 的訂閱</p>
+        <h3>管理 @TsaiAGa 訂閱狀態</h3>
         
-        <div class="btn-container">
-            <!-- YouTube 官方按鈕元件 -->
-            <div class="g-ytsubscribe" 
-                 data-channelid="UC4-GZ0Nlsf-P0w0m3wK4Gsg" 
-                 data-layout="full" 
-                 data-count="default"
-                 data-theme="dark">
-            </div>
-        </div>
+        <a href="https://www.youtube.com/@TsaiAGa?sub_confirmation=1" target="_blank" class="yt-btn">
+            變更訂閱狀態
+        </a>
     </div>
-
-    <!-- YouTube 官方 JavaScript SDK -->
-    <script src="https://apis.google.com/js/platform.js"></script>
 
 </body>
 </html>
